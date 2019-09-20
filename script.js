@@ -5,7 +5,6 @@ document.getElementById('parking-form').addEventListener('submit',function(evt){
     let i;
     for (i = 0; i < formInputs.length; i++) {
         let field = formInputs[i];
-        console.log(field);
         if (field.value === ""){
             let error = "<div class='input-field'>" + field.id + "  is required</div>" 
             field.insertAdjacentHTML('afterend', error)
@@ -15,10 +14,11 @@ document.getElementById('parking-form').addEventListener('submit',function(evt){
 
 
 // added event listener to the form which listens for a submit at which time executes a function 
-// let i holds the values as you loop through 
+// let i, tracks the loop you are on. it is set to 0, loop through as long as i is less than the length of formInputs, add 1 to i so that the loop progresses.
 //formInput is a collection of input elements and we check the value of each item in the collection
 // in the for loop
 //we have to iterate through the collection and access them by their index. 
+//formInputs[i] similar to python print(list(enumerate(formInputs))))
 
 //https://www.w3schools.com/jsref/met_node_insertadjacenthtml.asp https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
 //The insertAdjacentHTML() method of the Element interface parses the specified text as 
